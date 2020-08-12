@@ -18,5 +18,5 @@ Click to [STYLiSH](https://czshuo.github.io/STYLiSH/docs/index.html).
 <img src='/mdimg/cart_rwd.png' alt='STYLiSH homepage rwd' width='300px'>
 
 ## About
-Author: [CZShuo](https://github.com/CZShuo) (Oscar Cheng)
+Author: [CZShuo](https://github.com/CZShuo) (Oscar Cheng)<br>
 Design From: [AppWorks School](https://github.com/AppWorks-School)
