@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RYK6EK659B"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-RYK6EK659B');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STYLiSH</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css">
+    <link rel="stylesheet" href="../css/profile.css">
+</head>
+
+<body onload="cartOnload();renderProfile();">
+    <script src="../js/facebookLogin.js"></script>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v7.0&appId=545389312813011&autoLogAppEvents=1">
+    </script>
+    <header>
+        <div id="left-header">
+            <img src="../images/logo.png" id='logo' onclick="hrefIndex('all');">
+            <img src="../images/search.png" id="mobile-search">
+            <input id="mobile-search-input" type="text" placeholder="|">
+        </div>
+        <div id="right-header">
+
+            <div id="web-searchbar">
+                <input id="search-input" type="text" placeholder="|">
+                <img src="../images/search.png" id="search">
+            </div>
+            <div class="cartmember" id="cart" onclick='hrefCart();'>
+                <div id="in-cart"></div>
+            </div>
+            <div class="cartmember" id="member" onclick='hrefMember();'>
+            </div>
+            <!-- <div class="fb-login-button" data-size="small" data-button-type="login_with" data-layout="rounded"
+                data-auto-logout-link="true" data-use-continue-as="false" data-width="" data-onlogin="checkLoginState"></div> -->
+
+        </div>
+        <nav>
+            <div class="product-type" key='women' onclick="hrefIndex('women');">女裝</div>
+            <div class="product-type center-product-type" key='men' onclick="hrefIndex('men');">男裝</div>
+            <div class="product-type" key='accessories' onclick="hrefIndex('accessories');">配件</div>
+        </nav>
+    </header>
+    <main id="main">
+        <div id="profile">
+            <!-- <div id="picture"></div>
+            <div id="name"></div>
+            <div id="email"></div> -->
+        </div>
+        <div id="logins" onclick="logStatus();">
+            <div id="fb-login">
+                <img class="img" src="https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/OF6ddsGKpeB.png" alt="" width="24"
+                    height="24">
+                <div id="fblogin-text"></div>
+            </div>
+
+            <!-- <div class="fb-login-button" data-size="large" data-button-type="continue_with" data-layout="default"
+                data-auto-logout-link="true" data-use-continue-as="false" data-width=""></div> -->
+
+        </div>
+    </main>
+    <footer>
+        <nav>
+            <div class="footer-link" id="left-link">關於 Stylish</div>
+            <div class="footer-link">服務條款</div>
+            <div class="footer-link">隱私政策</div>
+            <div class="footer-link">聯絡我們</div>
+            <div class="footer-link">FAQ</div>
+        </nav>
+        <div id="social-links">
+            <img src="../images/line.png" class="social-link">
+            <img src="../images/twitter.png" class="social-link">
+            <img src="../images/facebook.png" class="social-link">
+        </div>
+        <div id="copyright">&copy; 2018. All rights reserved.</div>
+    </footer>
+    <div id="fixed-footers">
+        <div class="fixed-footer" id="fixed-divider" onclick="hrefCart();">
+            <div class="fixed-img" id="mobile-cart">
+                <div id="mobile-in-cart"></div>
+            </div>
+            <!-- <img src="./images/cart-white.png" alt="Cart" class="fixed-img"> -->
+            <div class="fixed-link">購物車</div>
+        </div>
+        <div class="fixed-footer" onclick="hrefMember();">
+            <img src="../images/member-white.png" alt="Member" class="fixed-img" id="mobile-member-image">
+            <div class="fixed-link" id="mobile-member-name">會員</div>
+        </div>
+    </div>
+
+    <script src="../js/template.js"></script>
+    <script src="../js/profile.js"></script>
+</body>
+
+</html>

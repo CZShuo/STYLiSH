@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RYK6EK659B"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-RYK6EK659B');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css">
+    <link rel="stylesheet" href="../css/cart.css">
+
+</head>
+
+<body onload="cartOnload();orderRender();">
+    <header>
+        <div id="left-header">
+            <img src="../images/logo.png" id='logo' onclick="hrefIndex('all');">
+            <img src="../images/search.png" id="mobile-search">
+            <input id="mobile-search-input" type="text" placeholder="|">
+        </div>
+        <div id="right-header">
+
+            <div id="web-searchbar">
+                <input id="search-input" type="text" placeholder="|">
+                <img src="../images/search.png" id="search">
+            </div>
+            <div class="cartmember" id="cart" onclick='hrefCart();'>
+                <div id="in-cart"></div>
+            </div>
+            <div class="cartmember" id="member" onclick='hrefMember();'>
+            </div>
+
+        </div>
+        <nav>
+            <div class="product-type" onclick="hrefIndex('women');">女裝</div>
+            <div class="product-type center-product-type" onclick="hrefIndex('men');">男裝</div>
+            <div class="product-type" onclick="hrefIndex('accessories');">配件</div>
+        </nav>
+    </header>
+    <main>
+        <div id="main">
+
+            <div id="orders">
+                <!-- <div id="cart-title">
+                    <div id="cart-title-name">
+                        購物車
+                    </div>
+                    <div id="web-title">
+                        <div>數量</div>
+                        <div>單價</div>
+                        <div>小計</div>
+                    </div>
+                </div> -->
+
+                <!-- <div class='order'>
+                    <div class='order-image'>
+                        <img src="./images/product.jpg">
+                    </div>
+                    <div class="order-detail">
+                        <div class="order-name">洋裝</div>
+                        <div class="order-id">12345</div>
+                        <div class="order-color">白色</div>
+                        <div class="order-size">M</div>
+                    </div>
+                    <div class="order-delete"></div>
+
+
+                    <div class="order-prices">
+                        <div class="order-counts">
+                            <div class="mobile-title">數量</div>
+                            <form>
+                                <select name="order-count">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </form>
+                        </div>
+                        <div class="order-counts">
+                            <div class="mobile-title">單價</div>
+                            <div class="single-price">599</div>
+                        </div>
+                        <div class="order-counts">
+                            <div class="mobile-title">小計</div>
+                            <div class="total-price">599</div>
+                        </div>
+                        <div class="web-order-delete">
+                            <div></div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+
+            <div id="ship">
+                <div id="ship-option">
+                    <div class="ship-option-div">
+                        <div>配送國家</div>
+                        <form>
+                            <select id="ship-country">
+                                <option value="TW" selected>台灣</option>
+                                <option value="KR">南韓</option>
+                            </select>
+                        </form>
+                    </div>
+                    <div class="ship-option-div">
+                        <div>付款方式</div>
+                        <form>
+                            <select id="ship-payment">
+                                <option value="credit_card" selected>信用卡</option>
+                                <!-- <option value="cash">貨到付款</option> -->
+                            </select>
+                        </form>
+                    </div>
+                </div>
+                <div id="ship-remind">
+                    ※ 提醒您：<br>
+                    ● 選擇宅配-請填寫正確收件人資訊，避免包裹配送不達<br>
+                    ● 選擇超商-請填寫正確收件人姓名(與證件相符)，避免無法領取
+                </div>
+            </div>
+
+            <form id="customer">
+                <div id="customer-title">
+                    訂購資料
+                </div>
+                <div class="customer-data">
+                    收件人姓名<br>
+                    <input type="text" id='customer-name'><br>
+                    <div id='customer-note'>務必填寫完整收件人姓名，避免包裹無法順利簽收</div>
+                </div>
+                <div class="customer-data">
+                    Email<br>
+                    <input type="text" id='customer-email'>
+                </div>
+                <div class="customer-data">
+                    手機<br>
+                    <input type="text" id='customer-phone'>
+                </div>
+                <div class="customer-data">
+                    地址<br>
+                    <input type="text" id='customer-address'>
+                </div>
+                <div id="customer-time">
+                    配送時間<br>
+                    <div id="customer-time-choose">
+                        <div class="input-time"><input type="radio" name="time" value="morning" checked>
+                            <div>08:00-12:00</div>
+                        </div>
+                        <div class="input-time"><input type="radio" name="time" value="afternoon">
+                            <div>14:00-18:00</div>
+                        </div>
+                        <div class="input-time"><input type="radio" name="time" value="both">
+                            <div>不指定</div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div id="tappay">
+                <div class="tappay-titles">卡號</div>
+                <div class="tpfield" id="card-number"></div>
+                <div class="tappay-titles">到期日</div>
+                <div class="tpfield" id="card-expiration-date"></div>
+                <div class="tappay-titles">安全碼</div>
+                <div class="tpfield" id="card-ccv"></div>
+            </div>
+            <div id="payment">
+                <div class="payment-block">
+                    <div class="">總金額</div>
+                    <div class="price-right" id="total-price">0&nbsp;NTD</div>
+                </div>
+                <div class="payment-block">
+                    <div class="">運費</div>
+                    <div class="price-right">100&nbsp;NTD</div>
+                </div>
+                <div class="payment-block" id='total-pay'>
+                    <div class="">應付金額</div>
+                    <div class="price-right" id="price-ship">100&nbsp;NTD</div>
+                </div>
+            </div>
+            <div id="pay-button">
+                確認付款
+            </div>
+        </div>
+    </main>
+    <footer>
+        <nav>
+            <div class="footer-link" id="left-link">關於 Stylish</div>
+            <div class="footer-link">服務條款</div>
+            <div class="footer-link">隱私政策</div>
+            <div class="footer-link">聯絡我們</div>
+            <div class="footer-link">FAQ</div>
+        </nav>
+        <div id="social-links">
+            <img src="../images/line.png" class="social-link">
+            <img src="../images/twitter.png" class="social-link">
+            <img src="../images/facebook.png" class="social-link">
+        </div>
+        <div id="copyright">&copy; 2018. All rights reserved.</div>
+    </footer>
+    <div id="fixed-footers">
+        <div class="fixed-footer" id="fixed-divider" onclick="hrefCart();">
+            <div class="fixed-img" id="mobile-cart">
+                <div id="mobile-in-cart"></div>
+            </div>
+            <!-- <img src="./images/cart-white.png" alt="Cart" class="fixed-img"> -->
+            <div class="fixed-link">購物車</div>
+        </div>
+        <div class="fixed-footer" onclick='hrefMember();'>
+            <img src="../images/member-white.png" alt="Member" class="fixed-img" id="mobile-member-image">
+            <div class="fixed-link" id="mobile-member-name">會員</div>
+        </div>
+    </div>
+
+    <script src="../js/template.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="https://js.tappaysdk.com/tpdirect/v4"></script>
+    <script src="../js/tappay.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RYK6EK659B"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-RYK6EK659B');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css">
+    <link rel="stylesheet" href="../css/product.css">
+
+</head>
+
+<body onload="cartOnload();">
+    <header>
+        <div id="left-header">
+            <img src="../images/logo.png" id='logo' onclick="hrefIndex('all');">
+            <img src="../images/search.png" id="mobile-search">
+            <input id="mobile-search-input" type="text" placeholder="|">
+        </div>
+        <div id="right-header">
+
+            <div id="web-searchbar">
+                <input id="search-input" type="text" placeholder="|">
+                <img src="../images/search.png" id="search">
+            </div>
+            <div class="cartmember" id="cart" onclick='hrefCart();'>
+                <div id="in-cart"></div>
+            </div>
+            <div class="cartmember" id="member" onclick='hrefMember();'>
+            </div>
+
+        </div>
+        <nav>
+            <div class="product-type" onclick="hrefIndex('women');">女裝</div>
+            <div class="product-type center-product-type" onclick="hrefIndex('men');">男裝</div>
+            <div class="product-type" onclick="hrefIndex('accessories');">配件</div>
+        </nav>
+    </header>
+    <main>
+        <div id="main">
+            <!-- <div id="pro-image"><img id="pro-image"></img></div>
+            <div id="pro-description">
+                <div id="pro-title">
+                    <div id="pro-name">洋裝</div>
+                    <div id="pro-id">12345</div>
+                    <div id="pro-price">TWD.999</div>
+                </div>
+                <div id="pro-buy">
+                    <div class="pro-colsiz">
+                        <div class="pro-tag">顏色</div>
+                        <div class="pro-color"></div>
+                    </div>
+                    <div class="pro-colsiz">
+                        <div class="pro-tag">尺寸</div>
+                        <div class="pro-size"></div>
+                    </div>
+                    <div class="pro-colsiz">
+                        <div class="pro-tag">庫存</div>
+                        <div id="pro-stock"></div>
+                    </div>
+                    <div id="pro-count">
+                        <div class="pro-add-minus">-</div>
+                        <div id="pro-number">1</div>
+                        <div class="pro-add-minus">+</div>
+                    </div>
+                    <div id="pro-button">請選擇尺寸</div>
+                </div>
+                <div id="pro-note"></div>
+            </div>
+            <div id="pro-story">
+                <div id="pro-story-title">細部說明</div>
+                <div id="pro-story-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </div>
+                <img class="pro-story-image"></img>
+            </div> -->
+        </div>
+    </main>
+    <footer>
+        <nav>
+            <div class="footer-link" id="left-link">關於 Stylish</div>
+            <div class="footer-link">服務條款</div>
+            <div class="footer-link">隱私政策</div>
+            <div class="footer-link">聯絡我們</div>
+            <div class="footer-link">FAQ</div>
+        </nav>
+        <div id="social-links">
+            <img src="../images/line.png" class="social-link">
+            <img src="../images/twitter.png" class="social-link">
+            <img src="../images/facebook.png" class="social-link">
+        </div>
+        <div id="copyright">&copy; 2018. All rights reserved.</div>
+    </footer>
+    <div id="fixed-footers">
+        <div class="fixed-footer" id="fixed-divider" onclick="hrefCart();">
+            <div class="fixed-img" id="mobile-cart">
+                <div id="mobile-in-cart"></div>
+            </div>
+            <!-- <img src="./images/cart-white.png" alt="Cart" class="fixed-img"> -->
+            <div class="fixed-link">購物車</div>
+        </div>
+        <div class="fixed-footer" onclick='hrefMember();'>
+            <img src="../images/member-white.png" alt="Member" class="fixed-img" id="mobile-member-image">
+            <div class="fixed-link" id="mobile-member-name">會員</div>
+        </div>
+    </div>
+    <script src="../js/template.js"></script>
+    <script src="../js/product.js"></script>
+    <script>
+        let p_id = window.location.search.slice(4);
+        getProductPage(p_id);
+    </script>
+</body>
+
+</html>

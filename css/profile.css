@@ -1,0 +1,62 @@
+main{
+    display: flex;
+    justify-content:flex-start;
+    flex-direction: column;
+}
+
+#logins {
+    flex-direction: column;
+    margin: 50px auto;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+#fb-login{
+    background-color: #4267b2;
+    font-size: 17px;
+    height: 40px;
+    max-width: 300px;
+    letter-spacing:.25px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    padding: 10px;
+    border-radius:8px;
+    cursor: pointer;
+}
+
+#fblogin-text{
+    margin-left: 10px;
+    font-family:Helvetica, Arial, sans-serif;
+}
+
+#profile {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: 50px auto;
+    align-items: center;
+}
+
+#picture {
+    border-radius: 50%;
+    width:200px;
+    height:200px;
+    border: 1px solid #fff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin:20px auto;
+}
+
+#name{
+    font-size: 18px;
+    font-weight: bold;
+    margin:15px auto;
+}
+#email{
+    font-size: 16px;
+}
