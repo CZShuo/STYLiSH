@@ -1,6 +1,20 @@
 # STYLiSH
+An E-Commerce website.
+
 ## Link
 Click to [STYLiSH](https://czshuo.github.io/STYLiSH/docs/index.html).
+
+## Technologies
+* Front-End
+  * HTML / CSS
+  * Javascript
+  * RWD w/ mobile-first design
+* Networking
+  * AJAX
+  * RESTful API
+* Third-Party Libraries
+  * TapPay
+  * Facebook
 
 ## Pages
 #### Homepage
